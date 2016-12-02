@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47469C52-F675-42F7-9E2E-200B5282BE1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentExceptions</RootNamespace>
+    <AssemblyName>FluentExceptions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\ActionErrorHandlerPackage.cs" />
+    <Compile Include="Action\ActionExecutablePackage.cs" />
+    <Compile Include="Action\ActionExecutablePackageBase.cs" />
+    <Compile Include="Action\ActionExecutablePackageCore.cs" />
+    <Compile Include="Action\ActionExtensions.cs" />
+    <Compile Include="Action\ActionFinalExecutablePackage.cs" />
+    <Compile Include="Action\ActionHandlerPackage.cs" />
+    <Compile Include="Action\ActionHandlerPackageBase.cs" />
+    <Compile Include="Action\ActionPackage.cs" />
+    <Compile Include="Action\ActionRethrowExecutablePackage.cs" />
+    <Compile Include="Action\ActionRetryExecutablePackage.cs" />
+    <Compile Include="Action\ActionSingleExceptionHandlerPackage.cs" />
+    <Compile Include="Async\AsyncDeferredExecutablePackageBase.cs" />
+    <Compile Include="Async\AsyncDeferredExecutablePackageBaseOfT.cs" />
+    <Compile Include="Async\AsyncExecutablePackage.cs" />
+    <Compile Include="Async\AsyncExecutablePackageBase.cs" />
+    <Compile Include="Async\AsyncExecutablePackageBaseOfT.cs" />
+    <Compile Include="Async\AsyncExecutablePackageCore.cs" />
+    <Compile Include="Async\AsyncExecutablePackageOfT.cs" />
+    <Compile Include="Async\AsyncExtensions.cs" />
+    <Compile Include="Async\AsyncFinalExecutablePackage.cs" />
+    <Compile Include="Async\AsyncFinalExecutablePackageOfT.cs" />
+    <Compile Include="Async\AsyncHandlerPackage.cs" />
+    <Compile Include="Async\AsyncHandlerPackageBase.cs" />
+    <Compile Include="Async\AsyncHandlerPackageOfT.cs" />
+    <Compile Include="Async\AsyncPackage.cs" />
+    <Compile Include="Async\AsyncPackageOfT.cs" />
+    <Compile Include="Async\AsyncRethrowExecutablePackage.cs" />
+    <Compile Include="Async\AsyncRetryExecutablePackage.cs" />
+    <Compile Include="Async\AsyncRetryExecutablePackageOfT.cs" />
+    <Compile Include="Async\AsyncRetryHandledPackage.cs" />
+    <Compile Include="Async\AsyncRetryHandledPackageBase.cs" />
+    <Compile Include="Async\AsyncRetryHandledPackageBaseOfT.cs" />
+    <Compile Include="Async\AsyncRetryHandledPackageOfT.cs" />
+    <Compile Include="Async\AsyncRetryRethrowExecutablePackage.cs" />
+    <Compile Include="Async\AsyncRetryRethrowExecutablePackageOfT.cs" />
+    <Compile Include="Async\AsyncSingleExceptionHandlerPackage.cs" />
+    <Compile Include="Async\AsyncSingleExceptionHandlerPackageOfT.cs" />
+    <Compile Include="Async\TaskErrorHandlerPackage.cs" />
+    <Compile Include="ErrorHandlers\CompleteErrorHandlerPackage.cs" />
+    <Compile Include="ErrorHandlers\ErrorHandler.cs" />
+    <Compile Include="ErrorHandlers\ErrorHandlerDefinition.cs" />
+    <Compile Include="ErrorHandlers\ErrorHandlerPackage.cs" />
+    <Compile Include="ErrorHandlers\FinalErrorHandlerPackage.cs" />
+    <Compile Include="ErrorHandlers\RethrowErrorHandlerPackage.cs" />
+    <Compile Include="Func\FuncErrorHandlerPackage.cs" />
+    <Compile Include="Func\FuncExecutablePackageCore.cs" />
+    <Compile Include="Func\FuncRethrowExecutablePackage.cs" />
+    <Compile Include="Func\FuncExecutablePackage.cs" />
+    <Compile Include="Func\FuncExecutablePackageBase.cs" />
+    <Compile Include="Func\FuncExtensions.cs" />
+    <Compile Include="Func\FuncFinalExecutablePackage.cs" />
+    <Compile Include="Func\FuncHandlerPackageBase.cs" />
+    <Compile Include="Func\FuncPackage.cs" />
+    <Compile Include="Func\FuncRetryExecutablePackage.cs" />
+    <Compile Include="Func\FuncSingleExceptionHandlerPackage.cs" />
+    <Compile Include="Func\FuncHandlerPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
