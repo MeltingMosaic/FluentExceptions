@@ -56,7 +56,7 @@ exceptionThrower
 
 What about async/await?
 
-Change `.Invoking()` to `.Awaiting()` and the handler now returns a Task (or Task<T>)
+Change `.Invoking()` to `.Awaiting()` and the handler now returns a `Task` (or `Task<T>`)
 
 ```c#
 await exceptionThrower.Awaiting(o => o.AsyncVoidMethodThatThrowsArithmeticException())
