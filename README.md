@@ -1,8 +1,8 @@
-#FluentExceptions
+# FluentExceptions
 
 FluentExceptions allows you to write code that handles exceptions in a fluent manner, rather than using try/catch blocks. 
 
-###Simple Example:
+### Simple Example:
 
 This snippet will eat an ArithmeticException
 
